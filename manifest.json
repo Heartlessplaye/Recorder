@@ -1,0 +1,28 @@
+{
+    "name": "Recorder",
+    "description": "Records the current tab in an offscreen document.",
+    "version": "1",
+    "manifest_version": 3,
+    "minimum_chrome_version": "116",
+    "action": {
+      "default_icon": {
+        "16" : "icons/not-recording.png", 
+        "32" : "icons/not-recording.png"
+      }, 
+
+      "default_popup" : "popup.html"
+    },
+    "host_permissions" : ["https://*/*", "http://*/*"],
+
+    "background": {
+      "service_worker": "serviceworker.js"
+    },
+    "permissions": ["tabCapture", "offscreen", "scripting", "storage", "tabs", "desktopCapture"], 
+
+    "web_accessible_resources" : [
+        {
+            "resources" : ["camera.html", "camera.js", "video.html", "video.js"], 
+            "matches" : ["https://*/*", "http://*/*"]
+        }
+    ]
+  }
