@@ -10,7 +10,9 @@ if (camera) {
   cameraElement.id = cameraId;
   cameraElement.setAttribute(
     "style",
-    `position: fixed; 
+    `     
+         all : initial;
+         position: fixed; 
          top:10px; 
          right:10px; 
          width:200px; 
